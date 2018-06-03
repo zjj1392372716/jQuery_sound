@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="aaron"></div>
+    <script src="./jquery-1.11.3/jquery.js"></script>
+    <script>
+        var $$ = ajQuery = function (selector) {
+            return new ajQuery.fn.init(selector);
+        }
+
+        ajQuery.fn = ajQuery.prototype = {
+            name: 'aaron',
+            init: function (selector) {
+                this.selector = selector;
+                return this;
+            },
+            constructor: ajQuery
+        }
+
+        ajQuery.fn.init.prototype = ajQuery.fn
+
+        ajQuery.fn.say = function () {
+            $("#aaron").html(this.name)
+        }
+
+        $$().say()
+    </script>
+</body>
+
+</html>
