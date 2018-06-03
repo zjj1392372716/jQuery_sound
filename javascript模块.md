@@ -1,0 +1,1 @@
+>  JavaScript 并未提供一种原生的、语言级别的模块化组织模式，而是将模块化的方法交由开发者来实现。因此，出现了很多种 JavaScript 模块化的实现方式，比如，CommonJS Modules、AMD 等。

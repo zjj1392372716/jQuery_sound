@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div id="box">
+        <span class="span">1</span>
+        <span class="span">2</span>
+        <span class="span">3</span>
+    </div>
+
+    <script src="./jquery-1.11.3/jquery.js"></script>
+    <script>
+        console.log($('#box'));
+        console.log($('.span'));
+        console.log('观察脚本加载的顺序')
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log('DOMContentLoaded回调')
+        }, false);
+        window.addEventListener("load", function () {
+            console.log('load事件回调')
+        }, false);
+        console.log('脚本解析一')
+        //测试加载
+        $(function () {
+            console.log('脚本解析二')
+        })
+        console.log('脚本解析三')
+
+    </script>
+</body>
+
+</html>
